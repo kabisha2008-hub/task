@@ -1,214 +1,475 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Kabisha Nattudurai is an ECE engineering student and frontend developer passionate about creating responsive, accessible and user-friendly websites.">
+          content="Portfolio of Kabisha Nattudurai, an ECE engineering student and aspiring frontend developer.">
 
     <meta name="keywords"
-        content="Kabisha Nattudurai, frontend developer, web developer, ECE student, HTML, CSS, JavaScript, portfolio">
+          content="Kabisha Nattudurai, frontend developer, web developer, ECE student, HTML, CSS, JavaScript">
 
-    <meta name="author" content="Kabisha Nattudurai">
+    <meta name="author"
+          content="Kabisha Nattudurai">
 
-    <meta name="robots" content="index, follow">
+    <meta name="theme-color"
+          content="#2563eb">
 
     <title>Kabisha Nattudurai | Frontend Developer</title>
 
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
+    <!-- Skip Link -->
     <a class="skip-link" href="#main-content">
         Skip to main content
     </a>
 
-    <header>
+    <!-- Header -->
+    <header class="site-header">
 
-        <nav aria-label="Main navigation">
+        <div class="container header-container">
 
-            <a href="index.html" class="logo">
-                Kabisha Nattudurai
+            <a href="index.html" class="logo" aria-label="Kabisha home">
+                Kabisha<span>.</span>
             </a>
 
-            <ul>
-                <li>
-                    <a href="index.html" aria-current="page">
-                        Home
-                    </a>
-                </li>
+            <nav class="main-nav" aria-label="Main navigation">
 
-                <li>
-                    <a href="about.html">
-                        About
-                    </a>
-                </li>
+                <ul class="nav-list">
 
-                <li>
-                    <a href="projects.html">
-                        Projects
-                    </a>
-                </li>
+                    <li>
+                        <a href="index.html" class="active">
+                            Home
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="contact.html">
-                        Contact
-                    </a>
-                </li>
-            </ul>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
 
-        </nav>
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Theme Toggle -->
+                <button
+                    type="button"
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false">
+
+                    🌙 Dark Mode
+
+                </button>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
+    <!-- Main -->
     <main id="main-content">
 
         <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
 
-        <section aria-labelledby="hero-title">
+            <div class="container hero-grid">
 
-            <p>HELLO, I'M</p>
+                <div class="hero-content">
 
-            <h1 id="hero-title">
-                Kabisha Nattudurai
-            </h1>
+                    <p class="eyebrow">
+                        Hello, I'm
+                    </p>
 
-            <h2>
-                Frontend Developer & ECE Engineering Student
-            </h2>
+                    <h1 id="hero-title">
+                        Kabisha Nattudurai
+                    </h1>
 
-            <p>
-                I enjoy creating modern, responsive and accessible websites
-                using HTML, CSS, JavaScript and other web technologies.
-                I am passionate about turning creative ideas into
-                meaningful digital experiences.
-            </p>
+                    <h2>
+                        Aspiring Frontend Developer
+                    </h2>
 
-            <p>
-                Currently, I am continuously improving my development,
-                problem-solving and UI/UX skills while building real-world
-                projects.
-            </p>
+                    <p class="hero-description">
+                        I'm an ECE engineering student passionate about
+                        creating modern, responsive and user-friendly
+                        websites using HTML, CSS, JavaScript and modern
+                        web technologies.
+                    </p>
 
-            <p>
-                <a href="projects.html">
-                    Explore My Projects
-                </a>
-                &nbsp;&nbsp;
-                <a href="contact.html">
-                    Get In Touch
-                </a>
-            </p>
+                    <div class="hero-actions">
+
+                        <a href="projects.html"
+                           class="btn btn-primary">
+                            View My Projects
+                        </a>
+
+                        <a href="contact.html"
+                           class="btn btn-secondary">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="profile-circle"
+                         aria-hidden="true">
+                        KN
+                    </div>
+
+                    <p class="hero-card-title">
+                        ECE Engineer
+                    </p>
+
+                    <p class="hero-card-text">
+                        Building creative digital experiences
+                        through code and design.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
 
-        <!-- Quick Introduction -->
+        <!-- About Preview -->
+        <section class="section about-preview"
+                 aria-labelledby="about-heading">
 
-        <section aria-labelledby="intro-title">
+            <div class="container">
 
-            <h2 id="intro-title">
-                A Little About Me
-            </h2>
+                <div class="section-heading">
 
-            <p>
-                I am an Electronics and Communication Engineering student
-                with a strong interest in web development and technology.
-                My goal is to become a skilled frontend developer who can
-                build websites that are visually appealing, responsive,
-                accessible and easy to use.
-            </p>
+                    <p class="eyebrow">
+                        About Me
+                    </p>
 
-            <p>
-                I believe that learning by building projects is one of the
-                best ways to improve technical skills. Therefore, I
-                continuously experiment with new technologies and create
-                practical projects.
-            </p>
+                    <h2 id="about-heading">
+                        Turning ideas into digital experiences
+                    </h2>
+
+                    <p>
+                        I enjoy combining technology, creativity and
+                        problem-solving to build websites that are
+                        accessible, responsive and visually engaging.
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <article class="info-card">
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Engineering
+                        </h3>
+
+                        <p>
+                            Currently pursuing Electronics and
+                            Communication Engineering and developing
+                            strong technical problem-solving skills.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Frontend Development
+                        </h3>
+
+                        <p>
+                            Interested in creating responsive interfaces
+                            using HTML, CSS, JavaScript and modern
+                            frontend technologies.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span class="card-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Continuous Learning
+                        </h3>
+
+                        <p>
+                            Continuously learning web development,
+                            Python, Git, SEO and new technologies.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
 
         </section>
 
 
         <!-- Skills -->
+        <section class="section skills-section"
+                 aria-labelledby="skills-heading">
 
-        <section aria-labelledby="skills-title">
+            <div class="container">
 
-            <h2 id="skills-title">
-                Technical Skills
-            </h2>
+                <div class="section-heading">
 
-            <ul>
-                <li>HTML5 & Semantic HTML</li>
-                <li>CSS3 & Responsive Design</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>C Programming</li>
-                <li>C++</li>
-                <li>Tailwind CSS</li>
-                <li>Git & GitHub</li>
-                <li>UI/UX Design Fundamentals</li>
-                <li>Search Engine Optimization</li>
-            </ul>
+                    <p class="eyebrow">
+                        My Skills
+                    </p>
+
+                    <h2 id="skills-heading">
+                        Technologies I Work With
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">C</span>
+                    <span class="skill">C++</span>
+                    <span class="skill">Tailwind CSS</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">GitHub</span>
+                    <span class="skill">Responsive Design</span>
+                    <span class="skill">SEO</span>
+                    <span class="skill">UI/UX</span>
+
+                </div>
+
+            </div>
 
         </section>
 
 
-        <!-- Career Goal -->
+        <!-- What I Do -->
+        <section class="section services-section"
+                 aria-labelledby="services-heading">
 
-        <section aria-labelledby="goal-title">
+            <div class="container">
 
-            <h2 id="goal-title">
-                My Career Goal
-            </h2>
+                <div class="section-heading">
 
-            <p>
-                My long-term goal is to grow as a frontend developer and
-                create high-quality digital products that combine good
-                design, accessibility and performance.
-            </p>
+                    <p class="eyebrow">
+                        What I Do
+                    </p>
 
-            <p>
-                I am also interested in exploring how artificial intelligence
-                can be integrated with modern web applications to create
-                smarter and more useful user experiences.
-            </p>
+                    <h2 id="services-heading">
+                        My Areas of Interest
+                    </h2>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-icon"
+                             aria-hidden="true">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Creating responsive and modern websites
+                            using semantic HTML, CSS and JavaScript.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon"
+                             aria-hidden="true">
+                            UI
+                        </div>
+
+                        <h3>
+                            UI/UX Design
+                        </h3>
+
+                        <p>
+                            Designing clean interfaces with a focus
+                            on usability, accessibility and responsive
+                            layouts.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon"
+                             aria-hidden="true">
+                            SEO
+                        </div>
+
+                        <h3>
+                            SEO
+                        </h3>
+
+                        <p>
+                            Learning how websites can be optimized
+                            for search engines and better visibility.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta-section"
+                 aria-labelledby="cta-heading">
+
+            <div class="container cta-container">
+
+                <div>
+
+                    <p class="eyebrow">
+                        Let's Connect
+                    </p>
+
+                    <h2 id="cta-heading">
+                        Have an idea? Let's build it.
+                    </h2>
+
+                    <p>
+                        I'm always interested in learning,
+                        experimenting and working on creative
+                        technology projects.
+                    </p>
+
+                </div>
+
+                <a href="contact.html"
+                   class="btn btn-primary">
+                    Get In Touch
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <footer>
+    <!-- Footer -->
+    <footer class="site-footer">
 
-        <p>
-            &copy; 2026 Kabisha Nattudurai.
-            All rights reserved.
-        </p>
+        <div class="container footer-container">
 
-        <nav aria-label="Footer navigation">
+            <div>
 
-            <a href="about.html">
-                About
-            </a>
+                <p class="footer-logo">
+                    Kabisha<span>.</span>
+                </p>
 
-            <a href="projects.html">
-                Projects
-            </a>
+                <p>
+                    Aspiring Frontend Developer & ECE Engineer.
+                </p>
 
-            <a href="contact.html">
-                Contact
-            </a>
+            </div>
 
-        </nav>
+
+            <nav aria-label="Footer navigation">
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <p class="copyright">
+                © 2026 Kabisha Nattudurai. All rights reserved.
+            </p>
+
+        </div>
 
     </footer>
 
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+
 </body>
-
 </html>
-
