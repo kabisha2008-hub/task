@@ -3,472 +3,140 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Portfolio of Kabisha Nattudurai, an ECE engineering student and aspiring frontend developer.">
+    <meta
+        name="description"
+        content="Interactive To-Do List with CRUD operations, filtering and local storage."
+    >
 
-    <meta name="keywords"
-          content="Kabisha Nattudurai, frontend developer, web developer, ECE student, HTML, CSS, JavaScript">
-
-    <meta name="author"
-          content="Kabisha Nattudurai">
-
-    <meta name="theme-color"
-          content="#2563eb">
-
-    <title>Kabisha Nattudurai | Frontend Developer</title>
+    <title>My To-Do List</title>
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <!-- Skip Link -->
-    <a class="skip-link" href="#main-content">
-        Skip to main content
-    </a>
-
-    <!-- Header -->
-    <header class="site-header">
-
-        <div class="container header-container">
-
-            <a href="index.html" class="logo" aria-label="Kabisha home">
-                Kabisha<span>.</span>
-            </a>
-
-            <nav class="main-nav" aria-label="Main navigation">
-
-                <ul class="nav-list">
-
-                    <li>
-                        <a href="index.html" class="active">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="projects.html">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-                <!-- Theme Toggle -->
-                <button
-                    type="button"
-                    id="theme-toggle"
-                    class="theme-toggle"
-                    aria-label="Switch to dark mode"
-                    aria-pressed="false">
-
-                    🌙 Dark Mode
-
-                </button>
-
-            </nav>
-
+    <header class="header">
+        <div class="container">
+            <h1>My To-Do List</h1>
+            <p>Organize your tasks and stay productive.</p>
         </div>
-
     </header>
 
 
-    <!-- Main -->
-    <main id="main-content">
+    <main class="container">
 
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
+        <!-- Add Task -->
+        <section class="task-input-section" aria-labelledby="add-task-title">
 
-            <div class="container hero-grid">
+            <h2 id="add-task-title">Add a New Task</h2>
 
-                <div class="hero-content">
+            <form id="task-form">
 
-                    <p class="eyebrow">
-                        Hello, I'm
-                    </p>
+                <label for="task-input">
+                    Task
+                </label>
 
-                    <h1 id="hero-title">
-                        Kabisha Nattudurai
-                    </h1>
+                <div class="input-group">
 
-                    <h2>
-                        Aspiring Frontend Developer
-                    </h2>
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Enter your task..."
+                        autocomplete="off"
+                        required
+                    >
 
-                    <p class="hero-description">
-                        I'm an ECE engineering student passionate about
-                        creating modern, responsive and user-friendly
-                        websites using HTML, CSS, JavaScript and modern
-                        web technologies.
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a href="projects.html"
-                           class="btn btn-primary">
-                            View My Projects
-                        </a>
-
-                        <a href="contact.html"
-                           class="btn btn-secondary">
-                            Contact Me
-                        </a>
-
-                    </div>
+                    <button type="submit" id="add-task-btn">
+                        Add Task
+                    </button>
 
                 </div>
 
+            </form>
 
-                <div class="hero-card">
+        </section>
 
-                    <div class="profile-circle"
-                         aria-hidden="true">
-                        KN
-                    </div>
 
-                    <p class="hero-card-title">
-                        ECE Engineer
-                    </p>
+        <!-- Filters -->
+        <section class="filter-section" aria-labelledby="filter-title">
 
-                    <p class="hero-card-text">
-                        Building creative digital experiences
-                        through code and design.
-                    </p>
+            <h2 id="filter-title">Filter Tasks</h2>
 
-                </div>
+            <div class="filters">
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="active"
+                >
+                    Active
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="completed"
+                >
+                    Completed
+                </button>
 
             </div>
 
         </section>
 
 
-        <!-- About Preview -->
-        <section class="section about-preview"
-                 aria-labelledby="about-heading">
+        <!-- Tasks -->
+        <section class="tasks-section" aria-labelledby="tasks-title">
 
-            <div class="container">
+            <div class="tasks-header">
 
-                <div class="section-heading">
+                <h2 id="tasks-title">
+                    My Tasks
+                </h2>
 
-                    <p class="eyebrow">
-                        About Me
-                    </p>
-
-                    <h2 id="about-heading">
-                        Turning ideas into digital experiences
-                    </h2>
-
-                    <p>
-                        I enjoy combining technology, creativity and
-                        problem-solving to build websites that are
-                        accessible, responsive and visually engaging.
-                    </p>
-
-                </div>
-
-
-                <div class="about-grid">
-
-                    <article class="info-card">
-
-                        <span class="card-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Engineering
-                        </h3>
-
-                        <p>
-                            Currently pursuing Electronics and
-                            Communication Engineering and developing
-                            strong technical problem-solving skills.
-                        </p>
-
-                    </article>
-
-
-                    <article class="info-card">
-
-                        <span class="card-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Frontend Development
-                        </h3>
-
-                        <p>
-                            Interested in creating responsive interfaces
-                            using HTML, CSS, JavaScript and modern
-                            frontend technologies.
-                        </p>
-
-                    </article>
-
-
-                    <article class="info-card">
-
-                        <span class="card-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Continuous Learning
-                        </h3>
-
-                        <p>
-                            Continuously learning web development,
-                            Python, Git, SEO and new technologies.
-                        </p>
-
-                    </article>
-
-                </div>
+                <span id="task-count">
+                    0 tasks
+                </span>
 
             </div>
 
-        </section>
+            <ul
+                id="task-list"
+                class="task-list"
+                aria-live="polite"
+            ></ul>
 
-
-        <!-- Skills -->
-        <section class="section skills-section"
-                 aria-labelledby="skills-heading">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        My Skills
-                    </p>
-
-                    <h2 id="skills-heading">
-                        Technologies I Work With
-                    </h2>
-
-                </div>
-
-
-                <div class="skills-grid">
-
-                    <span class="skill">HTML5</span>
-                    <span class="skill">CSS3</span>
-                    <span class="skill">JavaScript</span>
-                    <span class="skill">Python</span>
-                    <span class="skill">C</span>
-                    <span class="skill">C++</span>
-                    <span class="skill">Tailwind CSS</span>
-                    <span class="skill">Git</span>
-                    <span class="skill">GitHub</span>
-                    <span class="skill">Responsive Design</span>
-                    <span class="skill">SEO</span>
-                    <span class="skill">UI/UX</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- What I Do -->
-        <section class="section services-section"
-                 aria-labelledby="services-heading">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="eyebrow">
-                        What I Do
-                    </p>
-
-                    <h2 id="services-heading">
-                        My Areas of Interest
-                    </h2>
-
-                </div>
-
-
-                <div class="services-grid">
-
-                    <article class="service-card">
-
-                        <div class="service-icon"
-                             aria-hidden="true">
-                            &lt;/&gt;
-                        </div>
-
-                        <h3>
-                            Web Development
-                        </h3>
-
-                        <p>
-                            Creating responsive and modern websites
-                            using semantic HTML, CSS and JavaScript.
-                        </p>
-
-                    </article>
-
-
-                    <article class="service-card">
-
-                        <div class="service-icon"
-                             aria-hidden="true">
-                            UI
-                        </div>
-
-                        <h3>
-                            UI/UX Design
-                        </h3>
-
-                        <p>
-                            Designing clean interfaces with a focus
-                            on usability, accessibility and responsive
-                            layouts.
-                        </p>
-
-                    </article>
-
-
-                    <article class="service-card">
-
-                        <div class="service-icon"
-                             aria-hidden="true">
-                            SEO
-                        </div>
-
-                        <h3>
-                            SEO
-                        </h3>
-
-                        <p>
-                            Learning how websites can be optimized
-                            for search engines and better visibility.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CTA -->
-        <section class="cta-section"
-                 aria-labelledby="cta-heading">
-
-            <div class="container cta-container">
-
-                <div>
-
-                    <p class="eyebrow">
-                        Let's Connect
-                    </p>
-
-                    <h2 id="cta-heading">
-                        Have an idea? Let's build it.
-                    </h2>
-
-                    <p>
-                        I'm always interested in learning,
-                        experimenting and working on creative
-                        technology projects.
-                    </p>
-
-                </div>
-
-                <a href="contact.html"
-                   class="btn btn-primary">
-                    Get In Touch
-                </a>
-
-            </div>
+            <p
+                id="empty-message"
+                class="empty-message"
+            >
+                No tasks yet. Add your first task!
+            </p>
 
         </section>
 
     </main>
 
 
-    <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="footer">
 
-        <div class="container footer-container">
-
-            <div>
-
-                <p class="footer-logo">
-                    Kabisha<span>.</span>
-                </p>
-
-                <p>
-                    Aspiring Frontend Developer & ECE Engineer.
-                </p>
-
-            </div>
-
-
-            <nav aria-label="Footer navigation">
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="projects.html">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-
-            <p class="copyright">
-                © 2026 Kabisha Nattudurai. All rights reserved.
-            </p>
-
-        </div>
+        <p>
+            &copy; 2026 My To-Do List
+        </p>
 
     </footer>
 
-
-    <!-- JavaScript -->
+        
     <script src="./js/script.js"></script>
 
 </body>
